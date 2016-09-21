@@ -24,7 +24,7 @@ def file_to_dictionary(country_list):
 # print all capitals so the user can use correct spelling
 def test_kickoff(capitals_dict):
 	print "\nWelcome to the big European Capitals Quiz! Let's see how familiar you are with them.\n\nAs a hint, here are all the capitals you can choose from. Make sure your spelling is correct!\n\nType 'Exit' any time to finish the quiz and see your score.\n"
-	print capitals_dict.values()
+	print ", ".join(capitals_dict.values())
 
 
 # function to select a random country and present to the user
