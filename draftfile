@@ -1,0 +1,61 @@
+# TO DO:
+# class to select a random country and present to the user
+# prompt the user to type the capitals
+# function to evaluate if the answer is correct (key matches value?)
+# make sure every country gets asked only once
+
+
+
+# import txt file
+
+import random
+file_name = "EuropeanCapitals.txt"
+
+
+
+# process into dictionary
+
+
+
+# print all capitals so the user can use correct spelling
+
+def test_kickoff():
+	print "Welcome to the big European Capitals Quiz! Let's see how familiar you are with them.\nAs a hint, here are all the capitals you can choose from. Make sure your spelling is correct!"
+	for value in capitals_dict:
+		print capitals_dict.values()
+
+class Game():
+	def __init__(self, country, capital):
+		self.capitals_dict = {}
+		self.country = country
+		self.capital = capitals_dict
+
+	def read_file(file_name):
+		with open (file_name) as my_file:
+			european_capitals = my_file.readlines()
+			return european_capitals
+
+	def file_to_dictionary(country_list):
+		capitals_dict = {}
+	for countries in country_list:
+		split_countries = countries.split(",")
+		# print split_countries
+		country = split_countries[0]
+		capital = split_countries[1].strip()
+		print country, capital
+		capitals_dict[country] = capital
+		# return capitals_dict
+
+
+def main():
+	file_name = "EuropeanCapitals.txt"
+	country_list = 	read_file(file_name)
+	# print country_list
+	capitals_dict = file_to_dictionary(country_list)
+	# print capitals_dict
+	# test_kickoff()
+	# How to make the dictionary global??
+
+
+if __name__ == '__main__':
+	main()
